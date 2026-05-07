@@ -17,7 +17,7 @@ The project demonstrates clean coding practices, reusable logic, strict type saf
 
 ---
 
-# 🚀 Technologies Used
+# 🚀 Technology Used
 
 TypeScript
 
