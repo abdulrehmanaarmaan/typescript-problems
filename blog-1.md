@@ -37,7 +37,7 @@ Now the Admin type contains only:
 
 This is useful when only specific fields are needed from a larger type.
 
-## What is Omit?
+## What is `Omit`?
 
 Omit creates a new type by excluding specific properties from an existing type.
 
@@ -58,7 +58,7 @@ Now the Student type contains:
 
 Here, all properties from Person are included except age.
 
-## How do Pick and Omit Keep Code DRY?
+## How do `Pick` and `Omit` Keep Code DRY?
 
 Without these utility types, developers would need to manually create similar types repeatedly, which increases duplication and maintenance complexity.
 
