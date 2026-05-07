@@ -22,14 +22,18 @@ type Person = {
 
 Using Pick:
 
+```ts
 type Admin = Pick<Person, 'name' | 'email'>
+```
 
 Now the Admin type contains only:
 
+```ts
 {
     name: string;
     email: string;
 }
+```
 
 This is useful when only specific fields are needed from a larger type.
 
@@ -39,14 +43,18 @@ Omit creates a new type by excluding specific properties from an existing type.
 
 ### Example
 
+```ts
 type Student = Omit<Person, 'age'>
+```
 
 Now the Student type contains:
 
+```ts
 {
     name: string;
     email: string;
 }
+```
 
 Here, all properties from Person are included except age.
 

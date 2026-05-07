@@ -26,22 +26,28 @@ Without generics, developers often use any, which removes type safety.
 
 ### Without Generics
 
+```ts
 function identity(value: any): any {
     return value;
 }
+```
 
 Using any can cause unexpected bugs because TypeScript cannot check the actual type.
 
 ### With Generics
 
+```ts
 function identity<T>(value: T): T {
     return value;
 }
+```
 
 Now TypeScript preserves the original type automatically.
 
+```ts
 const text = identity("Hello");
 const number = identity(100);
+```
 
 Here:
 
@@ -56,14 +62,18 @@ Generics are commonly used in functions.
 
 ### Example
 
+```ts
 function getFirstElement<T>(array: T[]): T {
     return array[0];
 }
+```
 
 Usage:
 
+```ts
 const firstNumber = getFirstElement([1, 2, 3]);
 const firstString = getFirstElement(["A", "B", "C"]);
+```
 
 The same function works for multiple data types.
 
@@ -73,13 +83,16 @@ Generics can also be used with interfaces.
 
 ### Example
 
+```ts
 interface ApiResponse<T> {
     success: boolean;
     data: T;
 }
+```
 
 Usage:
 
+```ts 
 type User = {
     name: string;
     email: string;
@@ -92,6 +105,7 @@ const response: ApiResponse<User> = {
         email: "aarmaan@gmail.com"
     }
 };
+```
 
 This makes interfaces reusable for different data structures.
 
